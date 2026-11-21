@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>وايز بوينت للتدريب والاستشارات</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* VOICE: calm, credible institution — medical education meets technology.
+   IDEA: "the point" from the logo — education, healthcare, AI and simulation converging on one partner.
+   PICTURE: hero disc in brand blue with routes converging on a central point carrying a medical cross.
+   COLOUR and TYPE: logo blue #51BBEB dominant, deep night blue, silver from the logo; Readex Pro + IBM Plex Sans Arabic.
+   LAYOUT: iheed / fv.academy flow — nav, hero, services w/ filters + CME tags, about, vision/values, competencies, why, delivery model, partners & sectors, CTA, contact, footer. */
+:root{color-scheme:light dark;
+--bg:light-dark(#ffffff,#071d2b);--soft:light-dark(#eef8fe,#0c2a3d);--ink:light-dark(#0a2a3d,#e7f4fc);--mute:light-dark(#4c6576,#a3c0d1);
+--sky:#51bbeb;--sky2:light-dark(#e3f4fd,#123a52);--deep:light-dark(#0a2e4a,#0e3a58);--night:#061a2c;--link:light-dark(#0b5f8c,#7fd0f5);--silver:#9aa7b1;--line:light-dark(#dde9f1,#1c4660);--card:light-dark(#fff,#0b2738)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16.5px/1.75 "IBM Plex Sans Arabic",Tahoma,sans-serif;overflow-x:clip}
+h1,h2,h3{font-family:"Readex Pro","IBM Plex Sans Arabic",sans-serif;line-height:1.3;text-wrap:balance;margin:0}
+h1{font-size:clamp(32px,4.6vw,52px);font-weight:700}
+h2{font-size:clamp(26px,3vw,38px);font-weight:700}
+h3{font-size:19px;font-weight:600}
+p{margin:0}
+a{color:inherit}
+.wrap{max-width:1240px;margin:0 auto}
+.band{padding:clamp(40px,6vw,88px) max(5vw,16px)}
+.soft{background:var(--soft)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 22px;border-radius:999px;font:600 16px "Readex Pro",sans-serif;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid var(--sky);outline-offset:3px}
+.b1{background:var(--sky);color:#04223a;box-shadow:0 10px 30px -12px rgba(81,187,235,.8)}
+.b2{border-color:currentColor;background:transparent;color:inherit}
+.b3{background:var(--deep);color:#fff}
+.lead{font-size:18px;color:var(--mute)}
+/* header */
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:18px;padding:8px max(5vw,16px);max-width:1340px;margin:0 auto;position:relative}
+.logo img{height:52px;width:auto;display:block}
+.menu{display:flex;gap:2px;margin-inline-start:auto;list-style:none;padding:0;margin-block:0}
+.menu a{display:block;padding:10px 12px;border-radius:10px;text-decoration:none;font-weight:500}
+.menu a:hover{background:var(--soft)}
+.tog{display:none;margin-inline-start:auto;width:46px;height:46px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);font-size:22px;cursor:pointer}
+@media(max-width:1040px){.tog{display:block}.menu{display:none;position:absolute;inset-inline:0;top:100%;flex-direction:column;background:var(--bg);padding:10px max(5vw,16px) 18px;border-bottom:1px solid var(--line)}.menu.open{display:flex}.nav>.b3{display:none}}
+/* hero */
+.hero{position:relative;overflow:hidden;color:#fff;background:radial-gradient(120% 90% at 15% 20%,#0f4c74 0%,#08304d 45%,var(--night) 100%);padding:clamp(40px,6vw,96px) max(5vw,16px)}
+.hero::before{content:"";position:absolute;inset:-30%;background:conic-gradient(from 0deg at 60% 40%,transparent 0 60deg,rgba(81,187,235,.18) 90deg,transparent 140deg,rgba(154,167,177,.12) 220deg,transparent 280deg);filter:blur(60px);pointer-events:none}
+.hero .wrap{position:relative;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:center}
+.hero h1 span{background:linear-gradient(90deg,#fff,#9fdcf7 50%,#fff);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .lead{margin:18px 0 28px;max-width:58ch;color:#c9e4f3}
+.hero .b2{color:#fff;border-color:rgba(255,255,255,.55)}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:30px;padding:0;list-style:none}
+.pills li{padding:6px 14px;border-radius:999px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);font-size:14.5px;color:#e3f3fb}
+.scene{aspect-ratio:1/1;max-height:560px;width:100%}
+.scene svg{width:100%;height:100%;display:block;overflow:visible}
+.spin{transform-origin:300px 300px}
+@media(prefers-reduced-motion:no-preference){
+ .hero::before{animation:aur 26s linear infinite}@keyframes aur{to{transform:rotate(360deg)}}
+ .hero h1 span{animation:sh 7s ease-in-out infinite}@keyframes sh{50%{background-position:100% 0}}
+ .s1{animation:rot 60s linear infinite}.s2{animation:rot 40s linear infinite reverse}.s3{animation:rot 90s linear infinite}
+ @keyframes rot{to{transform:rotate(360deg)}}
+ .flowl{animation:fl 3.5s linear infinite}@keyframes fl{to{stroke-dashoffset:-48}}
+ .breath{animation:br 4s ease-in-out infinite;transform-origin:300px 300px}@keyframes br{50%{transform:scale(1.12);opacity:.5}}
+ .dot{animation:dt 4s ease-in-out infinite}@keyframes dt{50%{opacity:.35}}
+ .bars{animation:bs 6s ease-in-out infinite}@keyframes bs{50%{transform:translateY(-8px)}}
+}
+@media(max-width:760px){.hero .wrap{grid-template-columns:1fr}.scene{max-height:330px;order:-1}}
+/* scroll reveal */
+.js .rv{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}}
+/* section heads */
+.head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:16px;margin-bottom:28px}
+.head p{color:var(--mute);max-width:64ch;margin-top:8px}
+/* services */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.chips button{min-height:44px;padding:0 18px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:500 15px "IBM Plex Sans Arabic",sans-serif;cursor:pointer}
+.chips button[aria-pressed=true]{background:var(--deep);border-color:var(--deep);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,270px),1fr));gap:20px}
+.prog{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;transition:box-shadow .2s,transform .2s}
+.prog:hover{box-shadow:0 16px 40px -18px rgba(11,79,115,.45);transform:translateY(-3px)}
+.thumb{height:120px;position:relative}
+.thumb svg{position:absolute;inset:0;width:100%;height:100%}
+.tag{position:absolute;top:12px;inset-inline-start:12px;background:#fff;color:#0a2a3d;font-size:13px;font-weight:600;padding:4px 12px;border-radius:999px}
+.prog .body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.meta{font-size:14px;color:var(--mute)}
+.prog .more{margin-top:auto;padding-top:10px;font-weight:600;color:var(--link);text-decoration:none}
+.fine{font-size:13.5px;color:var(--mute);margin-top:18px}
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(24px,4vw,60px);align-items:center}
+.about .pic{border-radius:28px;overflow:hidden;aspect-ratio:4/5;max-height:580px;position:relative;background:var(--deep);box-shadow:0 30px 60px -30px rgba(6,26,44,.6)}
+.about .pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;opacity:0;transform:scale(1.12);transition:opacity 1.6s ease,transform 7s ease-out}
+.about .pic img.on{opacity:1;transform:scale(1)}
+.about .pic::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(6,26,44,.75),transparent 55%)}
+.about .pic span{position:absolute;z-index:1;inset-inline:18px;bottom:18px;color:#fff;font:600 17px/1.6 "Readex Pro",sans-serif}
+.dots{position:absolute;z-index:1;top:16px;inset-inline-start:16px;display:flex;gap:6px}
+.dots i{width:22px;height:4px;border-radius:2px;background:rgba(255,255,255,.45);transition:background .4s,width .4s}
+.dots i.on{background:#fff;width:36px}
+@media(prefers-reduced-motion:reduce){.about .pic img{transition:opacity .3s;transform:none}}
+.about p{color:var(--mute);margin-top:14px}
+.flow{list-style:none;padding:0;margin:22px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;counter-reset:s}
+.flow li{counter-increment:s;display:flex;gap:10px;align-items:center;padding:10px 14px;border-radius:14px;background:var(--card);border:1px solid var(--line);font-weight:500;font-size:15.5px}
+.flow li::before{content:counter(s);flex:none;width:30px;height:30px;border-radius:50%;background:var(--sky);color:#fff;font:700 14px/30px "Readex Pro";text-align:center}
+@media(max-width:760px){.about{grid-template-columns:1fr}.about .pic{aspect-ratio:16/10}}
+@media(max-width:420px){.flow{grid-template-columns:1fr}}
+/* vision */
+.vm{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.vm div{border-radius:24px;padding:clamp(22px,3vw,36px)}
+.vm .v{background:linear-gradient(135deg,#7fd0f5,var(--sky));color:#06283b}
+.vm .m{background:var(--deep);color:#fff}
+.vm h3{font-size:15px;opacity:.85;margin-bottom:8px}
+.vm p{font:600 clamp(19px,2vw,23px)/1.6 "Readex Pro",sans-serif}
+.values{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,210px),1fr));gap:14px;margin-top:20px}
+.values div{padding:18px;border-radius:18px;background:var(--card);border:1px solid var(--line)}
+.values b{font-family:"Readex Pro";display:block;margin-bottom:4px}
+.values p{font-size:14.5px;color:var(--mute)}
+@media(max-width:700px){.vm{grid-template-columns:1fr}}
+/* competencies */
+.comp{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+details{background:var(--card);border:1px solid var(--line);border-radius:18px}
+summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:14px;padding:16px 18px;min-height:60px;font:600 17px "Readex Pro",sans-serif}
+summary::-webkit-details-marker{display:none}
+summary i{flex:none;width:40px;height:40px;border-radius:12px;background:var(--sky2);color:var(--link);font:700 16px/40px "Readex Pro";text-align:center;font-style:normal}
+summary::after{content:"+";margin-inline-start:auto;font-size:24px;color:var(--mute);transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details ul{margin:0;padding:0 18px 18px;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+details li{padding:5px 12px;border-radius:999px;background:var(--soft);font-size:14.5px}
+@media(max-width:760px){.comp{grid-template-columns:1fr}}
+/* why */
+.feat{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px}
+.feat .ic{width:52px;height:52px;border-radius:16px;background:var(--sky2);display:grid;place-items:center;margin-bottom:14px}
+.feat .ic svg{width:28px;height:28px;stroke:var(--link);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.feat p{color:var(--mute);margin-top:6px;font-size:15.5px}
+/* delivery */
+.dark{background:var(--deep);color:#fff}
+.dark .head p{color:#cfe8f6}
+.steps{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px;list-style:none;padding:0;margin:0;counter-reset:d}
+.steps li{counter-increment:d;position:relative;padding:20px 16px;border-radius:18px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16)}
+.steps li::before{content:counter(d);display:block;font:700 34px/1 "Readex Pro";color:var(--sky);margin-bottom:10px}
+.steps b{font-family:"Readex Pro";display:block;margin-bottom:6px}
+.steps p{font-size:14.5px;color:#d6ebf7}
+@media(max-width:1000px){.steps{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:560px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* partners + sectors */
+.pgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.pc{padding:22px;border-radius:20px;background:var(--card);border:1px solid var(--line);border-top:5px solid var(--sky)}
+.pc p{color:var(--mute);font-size:15px;margin-top:6px}
+.sectors{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin:14px 0 0}
+.sectors li{padding:10px 16px;border-radius:14px;background:var(--card);border:1px solid var(--line);font-weight:500}
+@media(max-width:900px){.pgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.pgrid{grid-template-columns:1fr}}
+/* cta band */
+.cband{background:linear-gradient(120deg,#0a2e4a,#0f4c74 60%,#1f86bd);color:#fff;border-radius:28px;padding:clamp(28px,5vw,56px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px}
+.cband p{opacity:.95;margin-top:8px;max-width:60ch}
+.cband .b2{color:#fff}
+/* contact */
+.contact{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:clamp(24px,4vw,56px)}
+.info{display:grid;gap:12px;margin-top:22px}
+.info a,.info div{display:flex;gap:12px;align-items:center;padding:14px 16px;border-radius:16px;background:var(--soft);text-decoration:none}
+.info span{direction:ltr;unicode-bidi:isolate;white-space:nowrap;font-weight:600}
+.info em{font-style:normal;color:var(--mute);min-width:4.5em}
+form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;background:var(--card);border:1px solid var(--line);border-radius:24px;padding:clamp(20px,3vw,32px);align-content:start}
+label{display:grid;gap:6px;font-weight:500;font-size:15px}
+label.full{grid-column:1/-1}
+input,select,textarea{font:16px "IBM Plex Sans Arabic",sans-serif;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--ink);min-height:46px;width:100%}
+textarea{min-height:110px;resize:vertical}
+.ok{grid-column:1/-1;display:none;padding:12px 16px;border-radius:12px;background:var(--sky2);font-size:15px}
+@media(max-width:760px){.contact{grid-template-columns:1fr}form{grid-template-columns:1fr}}
+/* footer */
+footer{background:var(--night);color:#cfe6f3;padding:56px max(5vw,16px) 28px}
+.fgrid{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:28px}
+footer img{height:64px;width:auto}
+footer h3{color:#fff;font-size:16px;margin-bottom:12px}
+footer ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+footer a{text-decoration:none;opacity:.85}footer a:hover{opacity:1;text-decoration:underline}
+.ltr{direction:ltr;unicode-bidi:isolate}
+.legal{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;border-top:1px solid #1d4a63;margin-top:40px;padding-top:20px;font-size:14px;opacity:.8}
+@media(max-width:820px){.fgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.fgrid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header>
+<nav class="nav" aria-label="القائمة الرئيسية">
+  <a class="logo" href="#top"><img src="logo.png" alt="Wise Point - وايز بوينت للتدريب والاستشارات" width="82" height="52"></a>
+  <button class="tog" id="tog" aria-expanded="false" aria-controls="menu" aria-label="فتح القائمة">☰</button>
+  <ul class="menu" id="menu">
+    <li><a href="#services">خدماتنا</a></li>
+    <li><a href="#about">من نحن</a></li>
+    <li><a href="#competencies">مجالات الخبرة</a></li>
+    <li><a href="#why">لماذا وايز بوينت؟</a></li>
+    <li><a href="#partners">الشراكات</a></li>
+    <li><a href="#contact">تواصل معنا</a></li>
+  </ul>
+  <a class="btn b3" href="#contact">اطلب استشارة</a>
+</nav>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>من مقدّم تدريب إلى <span>شريك في التحوّل</span></h1>
+      <p class="lead">وايز بوينت للتدريب والاستشارات شركة سعودية متخصصة في ابتكار التعليم الطبي، والتطوير المهني، والتعلّم المعزّز بالتقنية، وتطوير القوى العاملة.</p>
+      <div class="cta">
+        <a class="btn b1" href="#services">استكشف خدماتنا</a>
+        <a class="btn b2" href="#contact">تواصل معنا</a>
+      </div>
+      <ul class="pills" aria-label="مجالاتنا">
+        <li>التعليم</li><li>الرعاية الصحية</li><li>الذكاء الاصطناعي</li><li>المحاكاة</li><li>التحول الرقمي</li><li>تطوير القوى العاملة</li>
+      </ul>
+    </div>
+    <div class="scene" aria-hidden="true">
+      <svg viewBox="0 0 600 600">
+        <defs>
+          <radialGradient id="glow"><stop offset="0" stop-color="#51bbeb" stop-opacity=".55"/><stop offset="1" stop-color="#51bbeb" stop-opacity="0"/></radialGradient>
+          <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9fdcf7"/><stop offset=".5" stop-color="#51bbeb" stop-opacity=".2"/><stop offset="1" stop-color="#9aa7b1"/></linearGradient>
+          <linearGradient id="bar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8fd6f6"/><stop offset="1" stop-color="#2d9bd6"/></linearGradient>
+        </defs>
+        <circle class="breath" cx="300" cy="300" r="250" fill="url(#glow)"/>
+        <g class="spin s3"><circle cx="300" cy="300" r="270" fill="none" stroke="url(#ring)" stroke-width="1.2"/><circle cx="300" cy="30" r="5" fill="#9fdcf7"/><circle cx="300" cy="570" r="3" fill="#9aa7b1"/></g>
+        <g class="spin s1"><circle cx="300" cy="300" r="215" fill="none" stroke="#51bbeb" stroke-opacity=".45" stroke-width="1.5" stroke-dasharray="1 9" stroke-linecap="round"/><circle cx="515" cy="300" r="7" fill="#51bbeb"/><circle cx="85" cy="300" r="4" fill="#fff" opacity=".8"/></g>
+        <g class="spin s2"><circle cx="300" cy="300" r="160" fill="none" stroke="url(#ring)" stroke-width="1.2" stroke-dasharray="120 40"/><circle cx="300" cy="140" r="5" fill="#fff"/></g>
+        <g id="routes" fill="none" stroke="#51bbeb" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="6 18" opacity=".7"></g>
+        <g id="nodes"></g>
+        <circle cx="300" cy="300" r="108" fill="#071f33" stroke="#51bbeb" stroke-opacity=".35"/>
+        <g class="bars">
+          <path d="M238 252h22l34 96h-22z" fill="url(#bar)"/>
+          <path d="M274 252h22l34 96h-22z" fill="url(#bar)" opacity=".85"/>
+        </g>
+        <circle cx="344" cy="262" r="22" fill="none" stroke="#51bbeb" stroke-width="8"/>
+        <circle class="dot" cx="344" cy="262" r="9" fill="#9aa7b1"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="services">
+  <div class="wrap">
+    <div class="head">
+      <div><h2>خدماتنا</h2><p>خدمات تدريب طبي معتمدة، وخدمات استشارية للجامعات والمنشآت الصحية والجهات الحكومية.</p></div>
+      <a class="btn b2" href="#contact">اطلب عرضاً مخصصاً</a>
+    </div>
+    <div class="chips" role="group" aria-label="تصفية الخدمات" id="chips"></div>
+    <div class="grid" id="progs"></div>
+    <p class="fine">قد تُقدَّم بعض البرامج مع شركاء أكاديميين أو دوليين معتمدين، وفق المتطلبات التنظيمية ومتطلبات الاعتماد المعمول بها.</p>
+  </div>
+</section>
+
+<section class="band soft" id="about">
+  <div class="wrap about">
+    <div class="pic" id="show"><img class="on" src="s1.jpg" alt=""><img src="s2.jpg" alt="" loading="lazy"><img src="s3.jpg" alt="" loading="lazy"><div class="dots"><i class="on"></i><i></i><i></i></div><span>نربط المعرفة والتقنية والقدرات البشرية لصناعة أثر قابل للقياس.</span></div>
+    <div>
+      <h2>من نحن ونهجنا</h2>
+      <p>نجمع الخبرة في تعليم المهن الصحية، والتدريب السريري، والتعليم القائم على الكفايات، وتطوير المناهج، والمحاكاة، والذكاء الاصطناعي، والتقنيات الغامرة، والتعلّم الرقمي، لنصمّم حلولاً تعليمية مبتكرة تلائم احتياجات المؤسسات وسوق العمل.</p>
+      <p>نتجاوز التدريب التقليدي إلى حلول متكاملة تربط:</p>
+      <ol class="flow">
+        <li>تقييم الاحتياج</li><li>تصميم المنهج والبرنامج</li><li>بناء الكفايات</li><li>التعلّم المعزّز بالتقنية</li>
+        <li>التدريب التجريبي</li><li>التقييم</li><li>التطوير المهني</li><li>نتائج قابلة للقياس</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="vision">
+  <div class="wrap">
+    <div class="vm">
+      <div class="v"><h3>رؤيتنا</h3><p>أن نكون شريكاً رائداً وموثوقاً في التعليم الطبي المبتكر، والبحث العلمي، والاستشارات الصحية، إقليمياً وعالمياً.</p></div>
+      <div class="m"><h3>رسالتنا</h3><p>تصميم وتقديم حلول تعلّم مبنية على الأدلة، وقائمة على الكفايات، ومدعومة بالتقنية، تُعدّ مهنيين أكفاء، وتقوّي المؤسسات، وتسهم في قوى عاملة جاهزة للمستقبل.</p></div>
+    </div>
+    <h2 style="margin-top:48px">قيمنا</h2>
+    <div class="values" id="values"></div>
+  </div>
+</section>
+
+<section class="band soft" id="competencies">
+  <div class="wrap">
+    <div class="head"><div><h2>مجالات الخبرة</h2><p>ثمانية مجالات متخصصة. اضغط على أي مجال لعرض تفاصيله.</p></div></div>
+    <div class="comp" id="comp"></div>
+  </div>
+</section>
+
+<section class="band" id="why">
+  <div class="wrap">
+    <div class="head"><div><h2>لماذا وايز بوينت؟</h2><p>شريك استراتيجي واحد يربط التعليم والرعاية الصحية والتقنية والذكاء الاصطناعي والمحاكاة والتدريب المهني وتطوير القوى العاملة.</p></div></div>
+    <div class="grid" id="feats"></div>
+  </div>
+</section>
+
+<section class="band dark" id="model">
+  <div class="wrap">
+    <div class="head"><div><h2>نموذج التنفيذ</h2><p>ننقل عملاءنا من التدريب التقليدي إلى تطوير قوى عاملة قائم على الكفايات، ومدعوم بالتقنية، ومُوجّه بالنتائج.</p></div></div>
+    <ol class="steps" id="steps"></ol>
+  </div>
+</section>
+
+<section class="band" id="partners">
+  <div class="wrap">
+    <div class="head"><div><h2>نموذج الشراكة الاستراتيجية</h2><p>منظومة شراكات مرنة تجمع قدرة التنفيذ المحلية مع الخبرة والتقنية الدولية.</p></div></div>
+    <div class="pgrid">
+      <div class="pc"><h3>شركاء أكاديميون</h3><p>الجامعات والكليات والمؤسسات الأكاديمية.</p></div>
+      <div class="pc"><h3>شركاء تعليم دوليون</h3><p>منظمات دولية وجهات تعليم متخصصة.</p></div>
+      <div class="pc"><h3>شركاء تقنيون</h3><p>مزوّدو الذكاء الاصطناعي والمحاكاة والواقع الافتراضي والتعلّم الرقمي.</p></div>
+      <div class="pc"><h3>منشآت صحية</h3><p>المستشفيات والمراكز الطبية والجهات الصحية والهيئات المهنية.</p></div>
+    </div>
+    <h2 style="margin-top:48px;font-size:clamp(22px,2.4vw,30px)">القطاعات التي نخدمها</h2>
+    <ul class="sectors" id="sectors"></ul>
+  </div>
+</section>
+
+<section class="band" style="padding-top:0">
+  <div class="wrap cband">
+    <div><h2>لنبدأ رحلة التحوّل معاً</h2><p>سواء كنت جامعة أو منشأة صحية أو جهة حكومية، أخبرنا باحتياجك وسنقترح الحل المناسب.</p></div>
+    <div class="cta"><a class="btn b1" href="#contact">تواصل معنا</a><a class="btn b2" href="#services">تصفّح الخدمات</a></div>
+  </div>
+</section>
+
+<section class="band soft" id="contact">
+  <div class="wrap contact">
+    <div>
+      <h2>تواصل معنا</h2>
+      <p class="lead" style="margin-top:10px;font-size:16.5px">للاستفسار عن البرامج التدريبية، أو الخدمات الاستشارية، أو الشراكات المؤسسية.</p>
+      <div class="info">
+        <a href="https://wa.me/966551083763"><em>واتساب</em><span>+966 55 108 3763</span></a>
+        <div><em>الهاتف</em><span>+966 55 108 3763</span></div>
+        <div><em>البريد</em><span>info@wisepoint.sa</span></div>
+        <div><em>الموقع</em><span>wisepoint.sa</span></div>
+      </div>
+    </div>
+    <form id="form" novalidate>
+      <label>الاسم<input id="f-name" required autocomplete="name"></label>
+      <label>البريد الإلكتروني<input id="f-mail" type="email" required autocomplete="email" dir="ltr"></label>
+      <label>الجهة<select id="f-type"><option>فرد / ممارس صحي</option><option>جامعة أو جهة أكاديمية</option><option>منشأة صحية</option><option>جهة حكومية</option><option>شركة</option></select></label>
+      <label>الخدمة المطلوبة<select id="f-topic"></select></label>
+      <label class="full">رسالتك<textarea id="f-msg"></textarea></label>
+      <button class="btn b1" type="submit">إرسال</button>
+      <p class="ok" id="ok" role="status"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap fgrid">
+    <div>
+      <img src="logo-white.png" alt="Wise Point" width="101" height="64">
+      <p style="margin-top:14px;font-size:15px;opacity:.85">التعليم الطبي، والتدريب المهني، وتطوير القوى العاملة.</p>
+    </div>
+    <div><h3>الخدمات</h3><ul id="fserv"></ul></div>
+    <div><h3>الشركة</h3><ul><li><a href="#about">من نحن</a></li><li><a href="#vision">الرؤية والرسالة</a></li><li><a href="#competencies">مجالات الخبرة</a></li><li><a href="#partners">الشراكات</a></li></ul></div>
+    <div><h3>تواصل</h3><ul><li><a href="#contact">نموذج التواصل</a></li><li class="ltr" style="text-align:right">info@wisepoint.sa</li><li class="ltr" style="text-align:right">+966 55 108 3763</li></ul></div>
+  </div>
+  <div class="wrap legal"><span>© 2026 وايز بوينت للتدريب والاستشارات. جميع الحقوق محفوظة.</span><span>سياسة الخصوصية · الشروط والأحكام</span></div>
+</footer>
+
+<script>
+{
+const cats={all:'الكل',train:'التدريب الطبي',consult:'الخدمات الاستشارية'};
+const serv=[
+ {c:'train',t:'دعم الحياة والوحدات المعتمدة',m:'برامج دعم الحياة ووحدات تعليم طبي مستمر معتمدة',tag:'ساعات CME',h:200},
+ {c:'train',t:'الاختبارات الطبية',m:'التحضير للاختبارات الطبية والمهنية وتنظيمها',tag:'اختبارات',h:12},
+ {c:'train',t:'شهادات التعليم الطبي',m:'شهادات مهنية في التعليم الطبي للممارسين وأعضاء هيئة التدريس',tag:'شهادة',h:215},
+ {c:'train',t:'الدبلوم والماجستير وبكالوريوس الطب',m:'برامج أكاديمية مع جامعات شريكة تمنح الدرجة',tag:'مع شركاء أكاديميين',h:190},
+ {c:'train',t:'البحث العلمي والتطوير والابتكار',m:'دعم البحث العلمي والتطوير والابتكار (RDI)',tag:'بحث وابتكار',h:255},
+ {c:'consult',t:'تطوير المناهج ومراجعتها',m:'مناهج قائمة على الكفايات والأنشطة المهنية الموثوقة (EPA) ومدعومة بالذكاء الاصطناعي',tag:'استشارة',h:205},
+ {c:'consult',t:'تطوير أعضاء هيئة التدريس واعتمادهم',m:'برامج تطوير أعضاء هيئة التدريس واعتمادهم',tag:'استشارة',h:225},
+ {c:'consult',t:'المحاكاة والتعلّم الغامر',m:'تصميم بيئات المحاكاة والتعلّم الغامر وبرامجها',tag:'استشارة',h:180},
+ {c:'consult',t:'السياسات والأطر الإرشادية والحوكمة',m:'صناعة السياسات، وأطر الأدلة الإرشادية، والحوكمة',tag:'استشارة',h:240},
+ {c:'consult',t:'السياسات الصحية والتخطيط الاستراتيجي',m:'تطوير السياسات الصحية والتخطيط الاستراتيجي للتطوير التنظيمي',tag:'استشارة',h:195},
+ {c:'consult',t:'تطوير القوى العاملة وبناء القدرات',m:'تأهيل الكوادر وبناء القدرات المؤسسية',tag:'استشارة',h:210}
+];
+let tn=0;
+const thumb=h=>{const i=tn++,a=['#0a2e4a','#0f4c74','#1f86bd','#51bbeb'],c1=a[i%3],c2=a[(i%3)+1],x=60+(i*53)%180;
+ return `<svg viewBox="0 0 300 120" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="g${i}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${c1}"/><stop offset="1" stop-color="${c2}"/></linearGradient></defs><rect width="300" height="120" fill="url(#g${i})"/><circle cx="${x}" cy="60" r="90" fill="none" stroke="#fff" stroke-opacity=".14"/><circle cx="${x}" cy="60" r="56" fill="none" stroke="#fff" stroke-opacity=".2"/><path d="M${x-30} 40h9l14 40h-9zM${x-15} 40h9l14 40h-9z" fill="#fff" opacity=".85"/><circle cx="${x+20}" cy="45" r="8" fill="none" stroke="#fff" stroke-width="3"/><circle cx="${x+20}" cy="45" r="3" fill="#9aa7b1"/></svg>`};
+const chips=document.getElementById('chips'),grid=document.getElementById('progs');
+let cur='all';
+const render=()=>{
+  chips.innerHTML=Object.entries(cats).map(([k,v])=>`<button type="button" data-k="${k}" aria-pressed="${k===cur}">${v}</button>`).join('');
+  grid.innerHTML=serv.filter(p=>cur==='all'||p.c===cur).map(p=>`<article class="prog"><div class="thumb">${thumb(p.h)}<span class="tag">${p.tag}</span></div><div class="body"><span class="meta">${cats[p.c]}</span><h3>${p.t}</h3><p class="meta">${p.m}</p><a class="more" href="#contact" data-topic="${p.t}">اطلب التفاصيل ←</a></div></article>`).join('');
+};
+chips.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;cur=b.dataset.k;render()});
+grid.addEventListener('click',e=>{const a=e.target.closest('[data-topic]');if(a)document.getElementById('f-topic').value=a.dataset.topic});
+render();
+document.getElementById('f-topic').innerHTML=serv.map(p=>`<option>${p.t}</option>`).join('')+'<option>شراكة مؤسسية</option><option>أخرى</option>';
+document.getElementById('fserv').innerHTML=serv.slice(0,5).map(p=>`<li><a href="#services">${p.t}</a></li>`).join('');
+
+const values=[['النزاهة','نعمل بأمانة وشفافية ومسؤولية أخلاقية في كل ما نقوم به.'],['الابتكار','نصمّم حلولاً تدريبية مبدعة واستشرافية تُلهم النمو والتحول.'],['التميّز','نسعى لأعلى المعايير المهنية لتحقيق نتائج متميزة.'],['التمكين','نؤمن بقدرة كل فرد على التعلّم والقيادة وصناعة الفرق.'],['شغف التعلّم','نغرس الفضول والحماس وحب التعلّم مدى الحياة.'],['المرونة','نتكيّف بسرعة مع الاحتياجات المتغيرة والاتجاهات الناشئة.'],['التعاون','نبني شراكات قائمة على الثقة والاحترام والنجاح المشترك.']];
+document.getElementById('values').innerHTML=values.map(([t,d])=>`<div><b>${t}</b><p>${d}</p></div>`).join('');
+
+const comp=[
+ ['التعليم الطبي وتعليم المهن الصحية',['تعليم المهن الصحية','استشارات التعليم الطبي','التدريس السريري وتطوير أعضاء هيئة التدريس','التعليم القائم على الكفايات (CBE)','الأنشطة المهنية الموثوقة (EPAs)','تطوير المناهج ومراجعتها','التقييم والتقويم','التقييم في بيئة العمل (WPBA)','الاستدلال السريري','التعليم بالمحاكاة','التطوير المهني المستمر']],
+ ['التعليم المدعوم بالذكاء الاصطناعي والتحول الرقمي',['مناهج مدعومة بالذكاء الاصطناعي','الذكاء الاصطناعي في تعليم المهن الصحية','تعلّم وتقييم مدعوم بالذكاء الاصطناعي','حلول التعلّم الرقمي','التعليم المعزّز بالتقنية','محو الأمية في الذكاء الاصطناعي','التحول الرقمي لمنظومات التعلّم','جاهزية القوى العاملة للمستقبل']],
+ ['المحاكاة والتعلّم الغامر',['التعليم بالمحاكاة','المحاكاة الافتراضية','التعلّم الغامر ثلاثي الأبعاد','المرضى الافتراضيون','التعليم بالواقع الافتراضي (VR)','محاكاة مدعومة بالذكاء الاصطناعي','التعلّم بالسيناريوهات','تطوير المهارات السريرية','تصميم برامج ومناهج المحاكاة']],
+ ['تطوير المناهج والكفايات',['أطر الكفايات','تصميم مناهج CBE وEPA','صياغة نواتج التعلّم','مواءمة المناهج','مراجعة البرامج وتحسينها','مخططات التقييم','تقييم الكفايات','مسارات التعلّم المهني','تقويم البرامج']],
+ ['تطوير القوى العاملة وبرامج تسريع المسار المهني',['تقييم المهارات والكفايات','التخطيط المهني','تعلّم بقيادة خبراء','مشروعات تطبيقية','التعلّم بالحالات','الإرشاد المهني','الجاهزية لسوق العمل','إعداد السيرة الذاتية والملف المهني','التحضير للمقابلات','بناء العلاقات المهنية']],
+ ['التطوير المهني والشهادات المصغّرة',['شهادات مهنية','دورات قصيرة','تعلّم بالوحدات','شهادات مصغّرة','مسارات تعلّم تراكمية','برامج التطوير المهني','ورش عمل تنفيذية','تدريب مهني قائم على الكفايات']],
+ ['الشراكات الجامعية',['برامج تدريب مشتركة','مبادرات التطوير المهني الجامعي','التدريب الميداني والتعلّم التجريبي','تطوير أعضاء هيئة التدريس','برامج قابلية التوظيف للطلاب','شراكات أكاديمية دولية','دمج التقنية','مشروعات بناء القدرات المؤسسية']],
+ ['الابتكار وريادة الأعمال وتنمية المواهب',['برامج الابتكار','الهاكاثونات','برامج ريادة الأعمال','تنمية المواهب','التعلّم بالتحديات','معسكرات الابتكار','دعم البحث والتطوير','مهارات التواصل العلمي والعرض','مبادرات الاحتضان والتسريع']]
+];
+document.getElementById('comp').innerHTML=comp.map(([t,l],i)=>`<details${i===0?' open':''}><summary><i>${i+1}</i>${t}</summary><ul>${l.map(x=>`<li>${x}</li>`).join('')}</ul></details>`).join('');
+
+const icons={
+ med:'<path d="M2 12h5l2-5 4 10 2-5h7"/>',
+ edu:'<path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/>',
+ tech:'<rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 9h6v6H9zM9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/>',
+ globe:'<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/>',
+ flex:'<path d="M4 7h11l-3-3M20 17H9l3 3"/>',
+ target:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/>'
+};
+const feats=[['med','خبرة طبية','أساس متين في تعليم المهن الصحية والتعليم السريري.'],['edu','خبرة تعليمية','مناهج قائمة على الكفايات، وتقييم، وتطوير لأعضاء هيئة التدريس.'],['tech','دمج التقنية','ذكاء اصطناعي، ومحاكاة، وواقع افتراضي، وتعلّم غامر ورقمي.'],['globe','تواصل دولي','وصول إلى خبراء دوليين وجهات تعليم وشركاء تقنيين.'],['flex','تقديم مرن','عن بُعد، ومدمج، وحضوري، ومحاكاة، وتعلّم تجريبي.'],['target','التركيز على النتائج','كفايات قابلة للقياس، وجاهزية للعمل، وأداء مهني، وأثر مؤسسي.']];
+document.getElementById('feats').innerHTML=feats.map(([i,t,d])=>`<div class="feat"><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true">${icons[i]}</svg></div><h3>${t}</h3><p>${d}</p></div>`).join('');
+
+const steps=[['التقييم','تحديد احتياجات المؤسسة والقوى العاملة والمتعلمين.'],['التصميم','برامج ومناهج ومسارات تعلّم قائمة على الكفايات.'],['دمج التقنية','اختيار حلول الذكاء الاصطناعي والمحاكاة والواقع الافتراضي والتعلّم الرقمي.'],['التنفيذ','تعلّم بقيادة خبراء: مدمج، وعن بُعد، وتجريبي، وغامر.'],['القياس','تقييم المعارف والمهارات والكفايات ونواتج التعلّم.'],['تقويم الأثر','مؤشرات قابلة للقياس للتحسين المستمر وقيمة مؤسسية.']];
+document.getElementById('steps').innerHTML=steps.map(([t,d])=>`<li><b>${t}</b><p>${d}</p></li>`).join('');
+
+document.getElementById('sectors').innerHTML=['التعليم العالي والجامعات','التعليم الطبي والصحي','المنشآت الصحية','القطاع الحكومي والعام','التدريب المهني','تطوير القوى العاملة','التحول الرقمي','الذكاء الاصطناعي والتقنيات الناشئة','الابتكار وريادة الأعمال','تنمية الشباب والمواهب','التعلّم والتطوير في الشركات'].map(s=>`<li>${s}</li>`).join('');
+
+const R=document.getElementById('routes'),N=document.getElementById('nodes');
+let r='',n='';
+for(let k=0;k<10;k++){
+  const a=k/10*Math.PI*2+.3,rad=k%2?220:255,x=300+Math.cos(a)*rad,y=300+Math.sin(a)*rad;
+  const cx=300+Math.cos(a+.6)*rad*.55,cy=300+Math.sin(a+.6)*rad*.55;
+  r+=`<path class="flowl" style="animation-delay:-${k*.35}s" d="M${x.toFixed(1)} ${y.toFixed(1)} Q${cx.toFixed(1)} ${cy.toFixed(1)} 300 300"/>`;
+  n+=`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${k%3?6:9}" fill="#071f33" stroke="${k%3?'#9aa7b1':'#51bbeb'}" stroke-width="2"/><circle class="dot" style="animation-delay:-${k*.4}s" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${k%3?2.5:3.5}" fill="#fff"/>`;
+}
+R.innerHTML=r;N.innerHTML=n;
+
+/* photo slideshow */
+const imgs=[...document.querySelectorAll('#show img')],ds=[...document.querySelectorAll('#show .dots i')];
+let si=0;
+const slide=setInterval(()=>{imgs[si].classList.remove('on');ds[si].classList.remove('on');si=(si+1)%imgs.length;imgs[si].classList.add('on');ds[si].classList.add('on')},5000);
+
+/* scroll reveal */
+document.documentElement.classList.add('js');
+const rvs=document.querySelectorAll('.band .head,.prog,.feat,.values>div,details,.pc,.steps li,.vm>div,.about>div,.cband,.contact>*,.sectors li');
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+rvs.forEach((el,i)=>{el.classList.add('rv');el.style.transitionDelay=(i%4)*90+'ms';io.observe(el)});
+chips.addEventListener('click',()=>grid.querySelectorAll('.prog').forEach(el=>el.classList.add('rv','in')));
+
+const tog=document.getElementById('tog'),menu=document.getElementById('menu');
+tog.addEventListener('click',()=>{const o=menu.classList.toggle('open');tog.setAttribute('aria-expanded',o)});
+menu.addEventListener('click',e=>{if(e.target.closest('a')){menu.classList.remove('open');tog.setAttribute('aria-expanded','false')}});
+
+const form=document.getElementById('form'),ok=document.getElementById('ok');
+form.addEventListener('submit',e=>{
+  e.preventDefault();
+  const name=document.getElementById('f-name').value.trim(),mail=document.getElementById('f-mail').value.trim();
+  ok.style.display='block';
+  if(!name||!/.+@.+\..+/.test(mail)){ok.textContent='فضلاً أدخل الاسم وبريداً إلكترونياً صحيحاً.';return}
+  ok.textContent='شكراً '+name+'. هذا النموذج للعرض حالياً ولم تُرسَل الرسالة؛ راسلنا على info@wisepoint.sa أو واتساب ‎+966 55 108 3763';
+});
+}
+</script>
+</body>
+</html>
